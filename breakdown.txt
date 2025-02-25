@@ -12,6 +12,11 @@ what to do:
     3. Take the result of one LLm then pass it to another LLM
     4. Use a tool to save it to a file (save a json rESPONSE AND THEN SEND that to the next backend)
 
+USES: 
+    llAMAINDEX
+    oLLAMA
+    Python
+    llamaParse
 
 The bigger Picture:
 
