@@ -416,8 +416,9 @@ def next_session():
 
     # Store data in session for future use
 
-    # session["name"] = name
-    # session["country"] = country
+    session = {}
+    session["name"] = name
+    session["country"] = country
 
     # Render the services page with the user's name and country
     return render_template('services.html', country=country, name=name)
