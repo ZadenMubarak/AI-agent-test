@@ -10,17 +10,16 @@ import joblib
 from openai import OpenAI
 
 
-
 # Initialize the Flask application
 app = Flask(__name__)
 
 
 # Set the secret key for the Flask application from an environment variable
-app.secret_key = os.getenv('FLASK_SECRET_KEY')
+# app.secret_key = os.getenv('FLASK_SECRET_KEY')
 
 
 # Instantiate the OpenAI client with API key from environment variable
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(api_key="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")
 
 
 # Load the predictive model from a file
@@ -416,8 +415,9 @@ def next_session():
     country = request.form['country']         # Retrieve the user's country
 
     # Store data in session for future use
-    session["name"] = name
-    session["country"] = country
+
+    # session["name"] = name
+    # session["country"] = country
 
     # Render the services page with the user's name and country
     return render_template('services.html', country=country, name=name)
