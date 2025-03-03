@@ -87,10 +87,6 @@ def get_response(prompt, model="gpt-3.5-turbo"):
     return response.choices[0].message.content
 
 
-
-
-
-
 def get_predict_message(country):
     """
     Generates a custom message prompt for requesting information about loan sources for small business establishment.
@@ -143,9 +139,6 @@ def get_predict_message(country):
     return prompt, prompt_response
 
 
-
-
-
 def get_further_response(prediction, question, prev_prompt, prev_response):
     """
     Generates a new prompt based on a previous conversation and a prediction result, then gets a response to it.
@@ -194,11 +187,6 @@ def get_further_response(prediction, question, prev_prompt, prev_response):
     further_response = get_response(new_prompt)
 
     return new_prompt, further_response
-
-
-
-
-
 
 
 
