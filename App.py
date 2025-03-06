@@ -19,8 +19,9 @@ app = Flask(__name__)
 
 
 # Instantiate the OpenAI client with API key from environment variable
-client = OpenAI(api_key="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")
-
+# client = OpenAI(api_key="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")
+# client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 # Load the predictive model from a file
 loaded_model = joblib.load('random_forest_model.pkl')
@@ -282,11 +283,6 @@ def get_financial_advice(country, country_interest, description, capital_loan, a
     advice_response = get_response(prompt)
 
     return prompt, advice_response
-
-
-
-
-
 
 
 
