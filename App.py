@@ -17,7 +17,7 @@ app = Flask(__name__)
 secret = os.urandom(24)
 
 # Set the secret key for the Flask application from an environment variable
-app.secret_key = secret
+app.secret_key = b'\xd0\xd6\x7f\xdfI\xdd\x8c\xbd\xaf^>D,\x01\x9d\xdf~z\xd7\x0b+[\x06R'
 
 
 # client = OpenAI(api_key="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")
